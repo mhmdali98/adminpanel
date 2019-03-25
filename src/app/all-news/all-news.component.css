@@ -1,0 +1,15 @@
+.titl{
+    text-align: center;
+    font-size: 2rem;
+    padding-top:50px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color:rgb(65, 58, 58);
+}
+.colo{
+    color:rgb(100, 149, 237);
+}
+ hr{
+    border-top: 3px dotted rgb(65, 58, 58);
+    width: 150px;
+}

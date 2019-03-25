@@ -1,0 +1,24 @@
+<div>
+  <div class="titl">  Update News </div>
+</div>
+<mat-card style="margin:50px">
+  <mat-card-content>
+    <div class="example-container" style="text-align: center">
+      <mat-form-field>
+        <input matInput [(ngModel)]="title"   placeholder="news Title" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput   [(ngModel)]="shortdesc" placeholder="short Description" required>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput  [(ngModel)]="Description" placeholder="Describtion" style="text-align: right" required></textarea>
+      </mat-form-field>
+    </div>
+    <div style="text-align: center">
+    <input type="file" name="file" id="file" class="inputfile" (change)="uploadImage($event)">
+    <label for="file">upload news image</label><br>
+    <button type="submit" [disabled]="!title || !shortdesc || !Description" mat-button color="primary" (click)="save()"> Update </button>
+  </div>
+  </mat-card-content>
+
+</mat-card>

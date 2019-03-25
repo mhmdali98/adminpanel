@@ -1,0 +1,27 @@
+
+  <div class="titl"> All News</div>
+ <div align="center">
+   <hr>
+</div>
+<div   style="margin:50px">
+    <table class="table table-striped">
+        <thead class="thead">
+          <tr >
+            <th style="margin-right:245px;padding:5px"><h3 class="colo">Title</h3></th>
+            <th scope="col"><h3 class="colo">Short Description</h3> </th>
+            <th scope="col"><h3 class="colo"> Description </h3></th>
+            <th scope="col"><h3 class="colo">Action</h3></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of Data">
+            <td>{{item.title}}</td>
+            <td>{{item.shortdesc}}</td>
+            <td>{{item.Description}}</td>
+            <td> <button mat-button color="accent" value="delete" (click)="del(item.id)"> delete </button> &nbsp;&nbsp; <button mat-button color="primary" value="update" (click)="up(item)"> update </button></td>
+          </tr>
+        </tbody>
+      </table>     
+</div>
+
+

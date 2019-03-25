@@ -1,0 +1,34 @@
+<div class="">
+<div>
+  <div class="titl">  Add News </div>
+</div>
+<mat-card style="margin:50px">
+    <mat-card-content> 
+<form style="text-align: center" #f="ngForm" (ngSubmit)="save(f)">
+    <div class="example-container">
+        <mat-form-field>
+          <input class="" matInput name="title" ngModel placeholder="news Title" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput name="shortDesc" ngModel placeholder="short Description" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput name="upload_at" ngModel [matDatepicker]="picker" placeholder="upload-at" required>
+            <mat-datepicker-toggle matSuffix  [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field>
+          <textarea matInput name="describtion" ngModel placeholder="Describtion" required></textarea>
+        </mat-form-field>
+
+      </div>
+  <input type="file" name="file" id="file" class="inputfile" (change)="uploadImage($event)">
+  <label for="file">upload news image</label><br>
+  <button type="submit" [disabled]="!f.valid" mat-button color="primary" style="align-self: flex-end"> Save </button>
+
+
+</form>
+</mat-card-content> 
+
+</mat-card>
+</div>

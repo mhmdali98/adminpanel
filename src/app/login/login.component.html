@@ -1,0 +1,23 @@
+<div id="">
+    <div class="titl">  Login page </div>
+  </div>
+<mat-card style="margin:50px">
+    <mat-card-content> 
+<form style="text-align: center" #f="ngForm" (ngSubmit)="signIn(f)">
+    <div class="example-container">
+        <mat-form-field>
+          <input matInput type="email" name="email" ngModel placeholder="Email"
+          email
+          required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput name="password" type="password" ngModel placeholder="Password"  required>
+          </mat-form-field>
+      </div>
+  <button type="submit" [disabled]="!f.valid" mat-button color="primary" style="align-self: flex-end"> Save </button>
+
+
+</form>
+</mat-card-content> 
+
+</mat-card>
